@@ -32,12 +32,14 @@
 <h2>第三者サービス</h2>
 <ul>
 <li><strong>Apple（App Store・アプリ内課金）:</strong> 支払いは Apple が処理します。本アプリはカードなどの支払いの情報を受け取りません。</li>
-<li><strong>Google Firebase:</strong> サポート ID、お問い合わせ、オンライン機能の情報の保管に使います。</li>
+<li><strong>Google Firebase:</strong> サポート ID、お問い合わせ、オンライン機能の情報と、クラウドセーブのセーブデータの保管に使います。</li>
 <li><strong>Apple（iCloud）:</strong> クラウドセーブが入りのとき、セーブデータをあなたの iCloud に保存します。</li>
 </ul>
 <h2>データの保管</h2>
 <p>セーブデータは端末の中にあり、端末のバックアップに含まれます。アプリを削除すると端末のセーブデータも消えます。</p>
-<p>ゲームの設定の「クラウドセーブ」が入りのとき（最初から入りです）、セーブデータ（作戦と記録）と、比べるための情報（保存の日時、端末の種類、アプリの版、作戦の概要）を、あなたの iCloud に保存します。同じ Apple ID の iPhone から読むために使います。運営のサーバーには送らず、運営は読めません。設定で切ると、それ以降は保存しません。</p>
+<p>ゲームの設定の「クラウドセーブ」が入りのとき（最初から入りです）、セーブデータ（作戦と記録）と、比べるための情報（保存の日時、端末の種類、アプリの版、作戦の概要）を、あなたの iCloud に保存します。同じ Apple ID の iPhone から読むために使います。iCloud の分は運営は読めません。設定で切ると、それ以降は保存しません。</p>
+<p>設定の「サーバー（Firebase）にも保存する」が入りのとき（最初から入りです）、同じセーブデータと比べるための情報を、予備として運営のサーバー（Google Firebase）にも保存します。アプリが作った乱数の番号で管理し、お名前やメールアドレスとは結びつけません。運営はサーバーの管理のために読むことができます。設定で切ると、それ以降は保存しません。</p>
+<p>設定の「引き継ぎコードを出す」で出るコードを知っている人は、サーバーのセーブデータを読めます。Apple ID が変わるときなどに使うものです。人に見せないでください。「作り直す」で新しいコードにすると、前のコードは使えなくなり、前のコードで読んだ端末もこのセーブデータへ上げられなくなります。</p>
 <p>上記のサーバーの情報は Firebase に保管します。</p>
 <h2>情報の削除</h2>
 <p>サポートの記録の削除は、お問い合わせから「記録を消してほしい」と送ってください。サポート ID で探して削除します。</p>
@@ -68,12 +70,14 @@
 <h2>Third-Party Services</h2>
 <ul>
 <li><strong>Apple (App Store and in-app purchases):</strong> Apple processes payments. The app never receives your card or payment details.</li>
-<li><strong>Google Firebase:</strong> stores support IDs, support requests and online feature data.</li>
+<li><strong>Google Firebase:</strong> stores support IDs, support requests, online feature data and Cloud Save data.</li>
 <li><strong>Apple (iCloud):</strong> stores your save data in your own iCloud while Cloud Save is on.</li>
 </ul>
 <h2>Data Storage</h2>
 <p>Save data is stored on your device and is included in device backups. Deleting the app deletes the save data on the device.</p>
-<p>While Cloud Save is on in the game's Settings (it is on by default), your save data (operations and profile) and the details used to compare saves (save time, device model, app version and an operation summary) are stored in your own iCloud, so an iPhone with the same Apple ID can load them. They are not sent to our servers and we cannot read them. Turning Cloud Save off stops further uploads.</p>
+<p>While Cloud Save is on in the game's Settings (it is on by default), your save data (operations and profile) and the details used to compare saves (save time, device model, app version and an operation summary) are stored in your own iCloud, so an iPhone with the same Apple ID can load them. We cannot read the iCloud copy. Turning Cloud Save off stops further uploads.</p>
+<p>While "Also save to the server (Firebase)" is on in Settings (it is on by default), the same save data and comparison details are also stored on our server (Google Firebase) as a backup. They are managed by a random number the app creates and are not tied to your name or email address. We can read them to run the server. Turning the setting off stops further uploads.</p>
+<p>Anyone who knows the code from "Show Transfer Code" in Settings can read the save data on the server. It is meant for moving your save, such as when your Apple ID changes. Do not show it to others. "Make New" replaces the code: the old code stops working, and devices that loaded with it can no longer upload to this save.</p>
 <p>The server data above is stored on Firebase.</p>
 <h2>Deleting Your Information</h2>
 <p>To delete your support records, send a request through Contact in the game. We find and delete them by your support ID.</p>
